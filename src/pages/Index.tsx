@@ -1,11 +1,23 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { useEffect, useState } from 'react';
+import FlowNavbar from '@/components/FlowNavbar';
+import NodePanel from '@/components/NodePanel';
+import FlowCanvas from '@/components/FlowCanvas';
+import PropertiesPanel from '@/components/PropertiesPanel';
 
 const Index = () => {
+  const [selectedNode, setSelectedNode] = useState(null);
+  
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <div className="flex flex-col h-screen bg-flow-background text-flow-text">
+      <FlowNavbar />
+      <div className="flex flex-1 overflow-hidden">
+        <NodePanel />
+        <FlowCanvas 
+          selectedNode={selectedNode} 
+          setSelectedNode={setSelectedNode} 
+        />
+        <PropertiesPanel selectedNode={selectedNode} />
       </div>
     </div>
   );

@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,16 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Custom flow builder colors
+				flow: {
+					background: '#1A1A25',
+					grid: '#242535',
+					system: '#6B2BAF',
+					input: '#2B3968',
+					output: '#286E47',
+					text: '#FFFFFF',
+					selected: '#3C82F6'
 				}
 			},
 			borderRadius: {

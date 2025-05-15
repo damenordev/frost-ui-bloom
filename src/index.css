@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -98,4 +99,42 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Flow Canvas Custom Styling */
+.react-flow__attribution {
+  display: none;
+}
+
+.react-flow__node {
+  cursor: grab;
+  user-select: none;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.2);
+}
+
+.react-flow__handle {
+  width: 8px;
+  height: 8px;
+}
+
+.react-flow__node.selected {
+  cursor: grab;
+}
+
+.react-flow__edge-path {
+  stroke-width: 2;
+}
+
+.react-flow__controls button {
+  background-color: #313244;
+  color: white;
+  border-color: #44475a;
+}
+
+.react-flow__controls button:hover {
+  background-color: #44475a;
+}
+
+.react-flow__minimap {
+  opacity: 0.9;
 }
